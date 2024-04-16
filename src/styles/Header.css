@@ -1,0 +1,20 @@
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    position: relative;
+}
+
+header::after {
+    position: absolute;
+    content: '';
+    width: 90%;
+    height: 1px;
+    background-color: lightgrey;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
