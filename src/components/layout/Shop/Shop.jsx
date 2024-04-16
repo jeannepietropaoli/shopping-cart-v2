@@ -4,8 +4,7 @@ import { FetchDataContext } from "../../../contexts/FetchDataContext";
 import NoItemsToShow from "../../shared/NoItemToShow";
 import ProductCard from "../../shared/ProductCard";
 
-export default function Shop() {
-  const { products, error, loading } = useContext(FetchDataContext);
+export default function Shop({products, error, loading}) {
   const numberOfLoadingProducts = 8;
   const arrayOfLoadingProducts = Array(numberOfLoadingProducts).fill(null);
   const productsToDisplay = loading ? arrayOfLoadingProducts : products;

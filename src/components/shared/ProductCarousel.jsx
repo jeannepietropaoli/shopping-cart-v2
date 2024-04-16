@@ -4,8 +4,7 @@ import NoItemsToShow from "./NoItemToShow";
 import { useContext } from "react";
 import Carousel from "./Carousel";
 
-export default function ProductCarousel() {
-  const { products, error, loading } = useContext(FetchDataContext);
+export default function ProductCarousel({products, error, loading}) {
   const numberOfLoadingProducts = 5;
   const arrayOfLoadingProducts = Array(numberOfLoadingProducts).fill(null);
   const excractNFirstProducts = (products, count) => {
