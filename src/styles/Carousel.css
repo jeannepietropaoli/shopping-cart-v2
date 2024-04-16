@@ -10,11 +10,17 @@
     animation: slide 12s ease-in-out infinite;
 }
 
-.slider .product-card {
+
+.slider .carousel-item {
     width: 205px;
     height: 205px;
     display: inline-block;
     margin-right: 43px;
+}
+
+.carousel-item > * {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes slide {
