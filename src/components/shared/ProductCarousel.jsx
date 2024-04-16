@@ -1,24 +1,8 @@
-import "../../styles/Carousel.css";
 import ProductCard from "./ProductCard";
 import { FetchDataContext } from "../../contexts/FetchDataContext";
 import NoItemsToShow from "./NoItemToShow";
 import { useContext } from "react";
-
-function CarouselSlider({items}) {
-  return (
-    <div className="slider">
-      {items.map((item, index) => {
-        return (
-          <ProductCard
-            key={item ? item.id : index}
-            item={item}
-            fullyDetailed={false}
-          />
-        );
-      })}
-    </div>
-  );
-}
+import Carousel from "./Carousel";
 
 export default function ProductCarousel() {
   const { products, error, loading } = useContext(FetchDataContext);
@@ -28,16 +12,13 @@ export default function ProductCarousel() {
     return products.slice(0, count);
   };
   const productsToDisplay = loading ? arrayOfLoadingProducts : excractNFirstProducts(products, numberOfLoadingProducts);
+  const renderProdcut = (item) => <ProductCard item={item} fullyDetailed={false}/>
 
   if (error) {
     return <NoItemsToShow />;
   }
 
-  return (
-    <div className="carousel">
-      {/* duplication of CarouselSlider allows to create an infinite carousel of items */}
-      <CarouselSlider items={productsToDisplay} />
-      <CarouselSlider items={productsToDisplay} />
-    </div>
-  );
+  return(
+    <Carousel itemsToDisplay={productsToDisplay} renderItem={renderProdcut} />
+  )
 }
