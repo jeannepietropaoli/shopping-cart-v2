@@ -1,7 +1,7 @@
 import "../../styles/Carousel.css";
 import ProductCard from "./ProductCard";
 import { FetchDataContext } from "../../contexts/FetchDataContext";
-import NoItemsToShow from "../shared/NoItemToShow";
+import NoItemsToShow from "./NoItemToShow";
 import { useContext } from "react";
 
 function CarouselSlider({items}) {
@@ -20,7 +20,7 @@ function CarouselSlider({items}) {
   );
 }
 
-export default function Carousel() {
+export default function ProductCarousel() {
   const { products, error, loading } = useContext(FetchDataContext);
   const numberOfLoadingProducts = 5;
   const arrayOfLoadingProducts = Array(numberOfLoadingProducts).fill(null);
