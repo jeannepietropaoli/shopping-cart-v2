@@ -1,0 +1,14 @@
+.products-list {
+    max-width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.products-list li {
+    max-width: 100%;
+}
+
+.products-list .product-card {
+    aspect-ratio: 9/10;
+}
