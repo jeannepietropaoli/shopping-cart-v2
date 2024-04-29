@@ -1,7 +1,5 @@
 import ProductCard from "./ProductCard";
-import { FetchDataContext } from "../../contexts/FetchDataContext";
 import NoItemsToShow from "./NoItemToShow";
-import { useContext } from "react";
 import Carousel from "./Carousel";
 
 export default function ProductCarousel({products, error, loading}) {
