@@ -6,12 +6,6 @@
   font-weight: 400;
 }
 
-.title {
-  font-family: Helvetica, sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: -2px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -30,7 +24,7 @@ body {
   width: 100%;
   max-width: 1200px;
   padding: 1% 3%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 p {
@@ -41,10 +35,6 @@ a {
   font-weight: 500;
   color: inherit;
   text-decoration: inherit;
-}
-
-h1 {
-  margin: 10px;
 }
 
 button {
@@ -75,3 +65,20 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.hidden {
+  display: none;
+}
+
+h1,h2,h3,h4,p {
+  margin: 0;
+}
+
+.page-title {
+  margin: 10px 0 20px 0;
+}
+
+.secondary-title {
+  margin-bottom: 20px;
+}
+
