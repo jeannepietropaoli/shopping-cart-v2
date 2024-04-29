@@ -5,20 +5,20 @@
     overflow: hidden;
 }
 
-.slider { 
+.carousel__slider { 
     display: inline-block;
     animation: slide 12s ease-in-out infinite;
 }
 
 
-.slider .carousel-item {
+.carousel__item {
     width: 205px;
     height: 205px;
     display: inline-block;
     margin-right: 43px;
 }
 
-.carousel-item > * {
+.carousel__item > * {
     width: 100%;
     height: 100%;
 }

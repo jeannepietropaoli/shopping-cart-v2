@@ -1,24 +1,25 @@
-nav {
+.nav {
     display: inline-block;
 }
 
-nav ul {
+.nav__list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav li {
+.nav__item {
     display: inline-block;
     margin-right: 30px;
+    position: relative;
 }
 
-nav a {
+.nav__link {
     color: inherit;
     position: relative;
 }
 
-nav a::after {
+.nav__link::after {
     position: absolute;
     content: '';
     height: 6px;
@@ -29,6 +30,21 @@ nav a::after {
     transition: all 200ms ease-in-out;
 }
 
-nav a:hover::after {
+.nav__link:hover::after {
     width: 100%;
+}
+
+.nav__cart-count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 0.7rem;
+    bottom: 30%;
+    left: 110%;
+    background-color: #535bf2;
+    font-weight: 600;
+    color: white;
+    border-radius: 50%;
+    padding-top: 1.5px;
 }
