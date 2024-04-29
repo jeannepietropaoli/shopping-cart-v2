@@ -1,23 +1,28 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Layout from "../layout/Layout"
+import App from "../App"
 import Home from "../layout/Home/Home"
 import Shop from "../layout/Shop/Shop"
 import GeneralErrorPage from "./errorPages/GeneralErrorPage"
+import Cart from "../layout/Cart/Cart"
 
-export default function Router({products, error, loading}) {
+export default function Router() {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <Layout/>,
+            element: <App/>,
             errorElement: <GeneralErrorPage/>,
             children: [
                 {
-                    path: 'home',
-                    element: <Home products={products} error={error} loading={loading}/>,
+                    index: true,
+                    element: <Home/>,
                 },
                 {
                     path: 'shop',
-                    element: <Shop products={products} error={error} loading={loading}/>,
+                    element: <Shop/>,
+                },
+                {
+                    path: 'cart',
+                    element: <Cart/>,
                 },
                 {
                     path: '*',
