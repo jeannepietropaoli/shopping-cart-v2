@@ -1,14 +1,14 @@
-header .container {
+.header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header {
+.header {
     position: relative;
 }
 
-header::after {
+.header::after {
     position: absolute;
     content: '';
     width: 90%;
@@ -17,4 +17,9 @@ header::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.header__logo {
+    font-size: 2rem;
+    font-weight: 700;
 }
