@@ -6,7 +6,6 @@ export default function useFetch(url, headers=null) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
       fetch(url, {
         headers: headers
       })
@@ -27,8 +26,6 @@ export default function useFetch(url, headers=null) {
         setError(error)
       })
       .finally(() => setLoading(false))
-    }, 4000)
-        
   }, []);
 
   return {fetchedData, loading, error};
