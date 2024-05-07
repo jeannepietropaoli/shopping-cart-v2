@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import '../../../styles/CartProductCard.css'
-import { CartActionsContext } from '../../contexts/CartActionsContext'
+import { CartActionsContext } from '../../../contexts/CartActionsContext'
 
 export default function CartProductCard({product}) {
     const { removeProductFromCart, incrementProductInCart, decrementProductInCart } = useContext(CartActionsContext)

@@ -3,7 +3,7 @@ import '../../../styles/Cart.css'
 import OrderSummary from "./OrderSummary"
 import CartProductCard from "./CartProductCard"
 import { useContext } from "react"
-import { CartContext } from "../../contexts/CartContext"
+import { CartContext } from "../../../contexts/CartContext"
 
 export default function Cart() {
     const {cart} = useContext(CartContext)

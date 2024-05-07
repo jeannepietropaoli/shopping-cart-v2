@@ -2,7 +2,7 @@ import Loader from "./Loader";
 import addToCartIcon from '../../assets/shopping-bag.png'
 import '../../styles/ProductCard.css'
 import { useContext } from "react";
-import { CartActionsContext } from "../contexts/CartActionsContext";
+import { CartActionsContext } from "../../contexts/CartActionsContext";
 
 export default function ProductCard({item}) {
     const { addProductToCart } = useContext(CartActionsContext)

@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Home from "../components/layout/Home/Home";
 import { describe, expect, it, vi } from "vitest";
 import { MemoryRouter } from 'react-router-dom';
-import { ProductsContext } from "../components/contexts/ProductsContext";
+import { ProductsContext } from "../contexts/ProductsContext";
 
 function renderHomeComponent() {
     return render(

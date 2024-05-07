@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi} from "vitest";
 import Shop, { numberOfLoadingProducts } from '../components/layout/Shop/Shop';
-import { ProductsContext } from '../components/contexts/ProductsContext';
-import { CartActionsContext } from '../components/contexts/CartActionsContext';
+import { ProductsContext } from '../contexts/ProductsContext';
+import { CartActionsContext } from '../contexts/CartActionsContext';
 
 function renderShopComponent(products, error, loading) {
     render(

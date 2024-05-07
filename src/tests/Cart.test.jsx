@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it, vi } from "vitest";
 import Cart from '../components/layout/Cart/Cart';
-import { CartContext } from '../components/contexts/CartContext';
-import { CartActionsContext } from '../components/contexts/CartActionsContext';
+import { CartContext } from '../contexts/CartContext';
+import { CartActionsContext } from '../contexts/CartActionsContext';
 
 function renderCartComponent(cartProducts) {
     return render(

@@ -1,7 +1,7 @@
 import "../../../styles/Shop.css";
 import NoItemsToShow from "../../shared/NoItemToShow";
 import ProductCard from "../../shared/ProductCard";
-import { ProductsContext } from "../../contexts/ProductsContext";
+import { ProductsContext } from "../../../contexts/ProductsContext";
 import { useContext } from "react";
 
 export const numberOfLoadingProducts = 8;

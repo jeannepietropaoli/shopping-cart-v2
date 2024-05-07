@@ -2,7 +2,7 @@ import { useContext } from "react";
 import "../../../styles/Home.css";
 import ProductCarousel from "../../shared/ProductCarousel";
 import { Link } from "react-router-dom";
-import { ProductsContext } from "../../contexts/ProductsContext";
+import { ProductsContext } from "../../../contexts/ProductsContext";
 
 export default function Home() {
 return (

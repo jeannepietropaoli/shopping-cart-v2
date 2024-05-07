@@ -1,6 +1,6 @@
 import "../../styles/ProductCarousel.css";
 import { useContext } from "react";
-import { ProductsContext } from "../contexts/ProductsContext";
+import { ProductsContext } from "../../contexts/ProductsContext";
 import Loader from "./Loader";
 import NoItemsToShow from "./NoItemToShow";
 

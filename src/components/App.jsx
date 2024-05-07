@@ -3,10 +3,10 @@ import Header from "./layout/Header/Header";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import "../styles/App.css";
-import { ProductsContext } from "./contexts/ProductsContext";
-import { CartContext } from "./contexts/CartContext";
+import { ProductsContext } from "../contexts/ProductsContext";
+import { CartContext } from "../contexts/CartContext";
 import useProducts from "../customHooks/useProducts";
-import { CartActionsContext } from "./contexts/CartActionsContext";
+import { CartActionsContext } from "../contexts/CartActionsContext";
 
 export default function App() {
   const [cart, setCart] = useState([])
