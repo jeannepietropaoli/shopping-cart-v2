@@ -2,10 +2,6 @@
 
 This project was bootstrapped with Vite.
 
-## Warning
-
-Work in progress
-
 ## Live version
 
 Not available yet
@@ -42,4 +38,8 @@ The goal of this React project is to create Single Page Application with React R
 - Add burger menu on mobile
 - Add visual feedback on addToCart button click
 - Add a shop sidebar/menu to filter down products
-- Improve color accents throughout the app
+- Improve testing coverage
+
+## Warning
+
+First bigger project using React Testing Library. Definitely challenging. I felt the need to come back a little and dig a bit deeper to fully understand the concepts with smaller projects and dedicated React Testing course, starting with 'React Testing Mastery' (https://codewithmosh.com/p/react-testing-mastery). I'll update this project with better testing coverage when I'll have a bit more under my belt.
