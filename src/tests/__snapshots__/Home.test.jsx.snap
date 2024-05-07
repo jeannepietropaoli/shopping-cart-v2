@@ -1,0 +1,139 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing Home Component > renders the component correctly 1`] = `
+<div>
+  <section
+    class="home"
+  >
+    <div
+      class="container home__container"
+    >
+      <h1
+        class="home__title"
+      >
+        Pack your fruits.
+      </h1>
+      <div
+        class="home__text-container"
+      >
+        <p>
+          Remember to eat your fruits by packing them for the day. Start collecting them in your cart and earn rewards when you go to check out and actually eat them !
+        </p>
+        <p>
+          Please note that prices follow the market fluctuations and can change when you hit refresh.
+        </p>
+      </div>
+      <button>
+        <a
+          href="/shop"
+        >
+          Shop now
+        </a>
+      </button>
+      <div
+        class="carousel"
+        data-testid="carousel"
+      >
+        <div
+          class="carousel__slider"
+        >
+          <div
+            class="carousel__item"
+            data-testid="carousel-item"
+          >
+            <img
+              alt="product1's emoji"
+              class="carousel__img"
+              src=""
+            />
+            <p
+              class="carousel__infos"
+            >
+              product1
+            </p>
+          </div>
+          <div
+            class="carousel__item"
+            data-testid="carousel-item"
+          >
+            <img
+              alt="product2's emoji"
+              class="carousel__img"
+              src=""
+            />
+            <p
+              class="carousel__infos"
+            >
+              product2
+            </p>
+          </div>
+          <div
+            class="carousel__item"
+            data-testid="carousel-item"
+          >
+            <img
+              alt="product3's emoji"
+              class="carousel__img"
+              src=""
+            />
+            <p
+              class="carousel__infos"
+            >
+              product3
+            </p>
+          </div>
+        </div>
+        <div
+          class="carousel__slider"
+        >
+          <div
+            class="carousel__item"
+            data-testid="carousel-item"
+          >
+            <img
+              alt="product1's emoji"
+              class="carousel__img"
+              src=""
+            />
+            <p
+              class="carousel__infos"
+            >
+              product1
+            </p>
+          </div>
+          <div
+            class="carousel__item"
+            data-testid="carousel-item"
+          >
+            <img
+              alt="product2's emoji"
+              class="carousel__img"
+              src=""
+            />
+            <p
+              class="carousel__infos"
+            >
+              product2
+            </p>
+          </div>
+          <div
+            class="carousel__item"
+            data-testid="carousel-item"
+          >
+            <img
+              alt="product3's emoji"
+              class="carousel__img"
+              src=""
+            />
+            <p
+              class="carousel__infos"
+            >
+              product3
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
