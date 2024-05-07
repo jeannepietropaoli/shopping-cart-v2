@@ -1,36 +1,16 @@
-import useFetch from "../customHooks/useFetch";
 import "../styles/App.css";
 import Header from "./layout/Header/Header";
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
 import "../styles/App.css";
-import { useMemo, useState } from "react";
-
-const apiKey = import.meta.env.VITE_API_KEY;
+import { ProductsContext } from "./contexts/ProductsContext";
+import { CartContext } from "./contexts/CartContext";
+import useProducts from "../customHooks/useProducts";
+import { CartActionsContext } from "./contexts/CartActionsContext";
 
 export default function App() {
   const [cart, setCart] = useState([])
-
-  const { fetchedData, error, loading } = useFetch("https://api.api-ninjas.com/v1/emoji?subgroup=food_fruit", {"X-Api-Key": apiKey});
-
-  // products manipulation
-
-  const getFakePrice = () => {
-    const minPrice = 1;
-    const maxPrice = 8;
-    return Math.floor(Math.random() * maxPrice) + minPrice;
-  };
-
-  const addFakeDetailsToProducts = (products) => {
-    return products
-      ? products.map((product) => {
-          return { ...product, id: product.code, price: getFakePrice() };
-        })
-      : [];
-  };
-
-  const products = useMemo(() => addFakeDetailsToProducts(fetchedData), [fetchedData]);
-
-  // cart manipulation
+  const { products, error, loading } = useProducts()
 
   const isProductAlreadyInCart = (newProduct) => {
     return cart.some(product => product.id === newProduct.id)
@@ -92,17 +72,13 @@ export default function App() {
     <div className="app">
       <Header numberOfProductsInCart={getCartNumberOfProducts()} />
       <main>
-        <Outlet 
-          context={{
-            products,
-            error,
-            loading,
-            cart,
-            addProductToCart,
-            removeProductFromCart,
-            incrementProductInCart,
-            decrementProductInCart
-          }} />
+        <ProductsContext.Provider value={{products, error, loading}}>
+          <CartContext.Provider value={{cart}}>
+            <CartActionsContext.Provider value={{addProductToCart, removeProductFromCart, incrementProductInCart, decrementProductInCart}}>
+            <Outlet/>
+            </CartActionsContext.Provider>
+          </CartContext.Provider>
+        </ProductsContext.Provider>
       </main>
     </div>
   );
