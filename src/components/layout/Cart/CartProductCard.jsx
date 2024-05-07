@@ -1,8 +1,11 @@
+import { useContext } from 'react'
 import '../../../styles/CartProductCard.css'
+import { CartActionsContext } from '../../contexts/CartActionsContext'
 
-export default function CartProductCard({product, removeProductFromCart, incrementProductInCart, decrementProductInCart}) {
+export default function CartProductCard({product}) {
+    const { removeProductFromCart, incrementProductInCart, decrementProductInCart } = useContext(CartActionsContext)
     return (
-        <div className="cart-item">
+        <div className="cart-item" data-testid="cart-item">
             <img className="cart-item__img" src={product.image} alt={`${product.name}'s emoji`} />
                 <div className="cart-item_infos">
                     <h3 className="cart-item__title">{product.name}</h3>

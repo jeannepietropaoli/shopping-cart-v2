@@ -1,18 +1,20 @@
 import "../../../styles/Shop.css";
 import NoItemsToShow from "../../shared/NoItemToShow";
 import ProductCard from "../../shared/ProductCard";
-import { useOutletContext } from "react-router-dom";
+import { ProductsContext } from "../../contexts/ProductsContext";
+import { useContext } from "react";
+
+export const numberOfLoadingProducts = 8;
 
 export default function Shop() {
-  const {products, error, loading, addProductToCart} = useOutletContext();
-  const numberOfLoadingProducts = 8;
+  const {products, error, loading} = useContext(ProductsContext);
   const arrayOfLoadingProducts = Array(numberOfLoadingProducts).fill(null);
   const productsToDisplay = loading ? arrayOfLoadingProducts : products;
 
   return (
     <section className="shop">
       <div className="container">
-        <h2 className="page-title">Shop</h2>
+        <h1 className="page-title">Shop</h1>
         {
           !error && 
             <ul className="shop__products-list">
@@ -23,7 +25,6 @@ export default function Shop() {
                     item={product}
                     showPrice={true}
                     showAddToCartBtn={true}
-                    addProdcutToCart={addProductToCart}
                   />
                 </li>
               );
