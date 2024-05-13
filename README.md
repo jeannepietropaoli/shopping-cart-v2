@@ -12,6 +12,10 @@ Project to practice skills learned inside The Odin Project's React section and s
 
 The goal of this React project is to create Single Page Application with React Router of a fake online store with a shopping cart feature and test our code using React-testing library. 
 
+I got inspired by @amadeuio's amazing design on Github. Credit to him for the simple, Apple-like, pure look of the app.
+
+To follow the instructions and goal of this product I decided to grab some emojis as products for my shop from the Ninja's emoji's API (https://api-ninjas.com/api/emoji) and to assign randon prices to them.
+
 ## Skills to practice
 
 - Getting always more familiar with React (hooks, state, props, custom hooks...)
