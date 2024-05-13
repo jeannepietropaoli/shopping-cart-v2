@@ -4,7 +4,7 @@ This project was bootstrapped with Vite.
 
 ## Live version
 
-Not available yet
+https://fruictify.netlify.app
 
 ## Description
 
