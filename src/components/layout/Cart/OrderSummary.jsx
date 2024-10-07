@@ -1,7 +1,8 @@
+import { useMemo } from 'react';
 import '../../../styles/OrderSummary.css'
 
 export default function OrderSummary({cart}) {
-    const orderTotalBeforeVAT = cart.reduce((total, currentProduct) => total + currentProduct.price * currentProduct.quantity, 0)
+    const orderTotalBeforeVAT = useMemo(() => cart.reduce((total, currentProduct) => total + currentProduct.price * currentProduct.quantity, 0), [cart]);
     const orderVAT = parseFloat((orderTotalBeforeVAT * 0.2).toFixed(2));
     const orderTotal = orderTotalBeforeVAT + orderVAT;
 

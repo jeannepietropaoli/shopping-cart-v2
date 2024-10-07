@@ -1,7 +1,7 @@
 import "../styles/App.css";
 import Header from "./layout/Header/Header";
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import "../styles/App.css";
 import { ProductsContext } from "../contexts/ProductsContext";
 import { CartContext } from "../contexts/CartContext";
@@ -64,13 +64,13 @@ export default function App() {
       }
   }
 
-  const getCartNumberOfProducts = () => {
+  const getCartNumberOfProducts = useMemo(() => {
     return cart.reduce((total, currentProduct) => total + currentProduct.quantity, 0)
-  }
+  }, [cart])
 
   return (
     <div className="app">
-      <Header numberOfProductsInCart={getCartNumberOfProducts()} />
+      <Header numberOfProductsInCart={getCartNumberOfProducts} />
       <main>
         <ProductsContext.Provider value={{products, error, loading}}>
           <CartContext.Provider value={{cart}}>
